@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="10.0.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="10.0.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="10.0.000" expanded="true" height="68" name="Read CSV" width="90" x="45" y="238">
+        <parameter key="csv_file" value="C:\Users\bignu\OneDrive - University of Nicosia\Semester5\Neural Networks And Deep Learning\project_2\selwood.txt"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Compound.true.polynominal.attribute"/>
+          <parameter key="1" value="Activity.true.polynominal.attribute"/>
+          <parameter key="2" value="ATCH1.true.real.attribute"/>
+          <parameter key="3" value="ATCH2.true.real.attribute"/>
+          <parameter key="4" value="ATCH3.true.real.attribute"/>
+          <parameter key="5" value="ATCH4.true.real.attribute"/>
+          <parameter key="6" value="ATCH5.true.real.attribute"/>
+          <parameter key="7" value="ATCH6.true.real.attribute"/>
+          <parameter key="8" value="ATCH7.true.real.attribute"/>
+          <parameter key="9" value="ATCH8.true.real.attribute"/>
+          <parameter key="10" value="ATCH9.true.real.attribute"/>
+          <parameter key="11" value="ATCH10.true.real.attribute"/>
+          <parameter key="12" value="DIPV_X.true.real.attribute"/>
+          <parameter key="13" value="DIPV_Y.true.real.attribute"/>
+          <parameter key="14" value="DIPV_Z.true.real.attribute"/>
+          <parameter key="15" value="DIPMOM.true.real.attribute"/>
+          <parameter key="16" value="ESDL1.true.real.attribute"/>
+          <parameter key="17" value="ESDL2.true.real.attribute"/>
+          <parameter key="18" value="ESDL3.true.real.attribute"/>
+          <parameter key="19" value="ESDL4.true.real.attribute"/>
+          <parameter key="20" value="ESDL5.true.real.attribute"/>
+          <parameter key="21" value="ESDL6.true.real.attribute"/>
+          <parameter key="22" value="ESDL7.true.real.attribute"/>
+          <parameter key="23" value="ESDL8.true.real.attribute"/>
+          <parameter key="24" value="ESDL9.true.real.attribute"/>
+          <parameter key="25" value="ESDL10.true.real.attribute"/>
+          <parameter key="26" value="NSDL1.true.real.attribute"/>
+          <parameter key="27" value="NSDL2.true.real.attribute"/>
+          <parameter key="28" value="NSDL3.true.real.attribute"/>
+          <parameter key="29" value="NSDL4.true.real.attribute"/>
+          <parameter key="30" value="NSDL5.true.real.attribute"/>
+          <parameter key="31" value="NSDL6.true.real.attribute"/>
+          <parameter key="32" value="NSDL7.true.real.attribute"/>
+          <parameter key="33" value="NSDL8.true.real.attribute"/>
+          <parameter key="34" value="NSDL9.true.real.attribute"/>
+          <parameter key="35" value="NSDL10.true.real.attribute"/>
+          <parameter key="36" value="DWVOL.true.real.attribute"/>
+          <parameter key="37" value="SURF_A.true.real.attribute"/>
+          <parameter key="38" value="MOFI_X.true.real.attribute"/>
+          <parameter key="39" value="MOFI_Y.true.real.attribute"/>
+          <parameter key="40" value="MOFI_Z.true.real.attribute"/>
+          <parameter key="41" value="PEAX_X.true.real.attribute"/>
+          <parameter key="42" value="PEAX_Y.true.real.attribute"/>
+          <parameter key="43" value="PEAX_Z.true.real.attribute"/>
+          <parameter key="44" value="MOL_WT.true.real.attribute"/>
+          <parameter key="45" value="S8_1DX.true.real.attribute"/>
+          <parameter key="46" value="S8_1DY.true.real.attribute"/>
+          <parameter key="47" value="S8_1DZ.true.real.attribute"/>
+          <parameter key="48" value="S8_1CX.true.real.attribute"/>
+          <parameter key="49" value="S8_1CY.true.real.attribute"/>
+          <parameter key="50" value="S8_1CZ.true.real.attribute"/>
+          <parameter key="51" value="LOGP.true.real.attribute"/>
+          <parameter key="52" value="M_PNT.true.integer.attribute"/>
+          <parameter key="53" value="SUM_F.true.real.attribute"/>
+          <parameter key="54" value="SUM_R.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="replace" compatibility="10.0.000" expanded="true" height="82" name="Replace" width="90" x="179" y="238">
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="Activity"/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="replace_what" value="&lt;-1\*"/>
+        <parameter key="replace_by" value="-1"/>
+      </operator>
+      <operator activated="true" class="parse_numbers" compatibility="10.0.000" expanded="true" height="82" name="Parse Numbers" width="90" x="313" y="238">
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="Activity"/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="unparsable_value_handling" value="fail"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="10.0.000" expanded="true" height="82" name="Select Attributes" width="90" x="447" y="238">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Compound"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="10.0.000" expanded="true" height="82" name="Set Role" width="90" x="581" y="238">
+        <parameter key="attribute_name" value="Activity"/>
+        <parameter key="target_role" value="label"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="normalize" compatibility="10.0.000" expanded="true" height="103" name="Normalize" width="90" x="715" y="238">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="true"/>
+        <parameter key="method" value="range transformation"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="1.0"/>
+        <parameter key="allow_negative_values" value="false"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Replace" to_port="example set input"/>
+      <connect from_op="Replace" from_port="example set output" to_op="Parse Numbers" to_port="example set input"/>
+      <connect from_op="Parse Numbers" from_port="example set output" to_op="Select Attributes" to_port="example set input"/>
+      <connect from_op="Select Attributes" from_port="example set output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Normalize" to_port="example set input"/>
+      <connect from_op="Normalize" from_port="example set output" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
